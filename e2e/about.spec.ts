@@ -19,7 +19,7 @@ test.describe('Header area', () => {
         await expect(page).toHaveTitle('About Us');
     })
 
-    test.skip('The meta tag', async ({ page }) => { 
+    test('The meta tag', async ({ page }) => { 
         // Start from the index page (the baseURL is set via the webServer in the playwright.config.ts)
         await page.goto(urlAbout)
         
@@ -33,7 +33,7 @@ test.describe('Header area', () => {
         await expect(metaDescriptionThree).toHaveAttribute('content', 'BCIT Digital Design and Development Diploma')
     })
 
-    test.skip('The link tag', async ({ page }) => {
+    test('The link tag', async ({ page }) => {
         await page.goto(urlAbout)
 
         const linkTag = page.locator('link[rel="icon"]');
