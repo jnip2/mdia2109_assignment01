@@ -13,7 +13,7 @@ test.afterAll(async () => {
 });
 
 test.describe('Header area', () => {
-    test.skip('The title tag', async({ page }) => {
+    test('The title tag', async({ page }) => {
         await page.goto(urlAbout)
 
         await expect(page).toHaveTitle('About Us');
