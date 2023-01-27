@@ -74,7 +74,7 @@ test.describe('Main area', () => {
 })
 
 test.describe('The Arrow Area', () => {
-    test.skip('Link Tag and navigation', async({ page }) => {
+    test('Link Tag and navigation', async({ page }) => {
         await page.goto(urlHome)
 
         await expect(page.locator('a > span > img')).toHaveCount(1);
