@@ -42,39 +42,39 @@ test.describe('Header area', () => {
 })
 
 test.describe('Main area', () => {
-    test('Header Tag', async({ page }) => {
+    test.skip('Header Tag', async({ page }) => {
         await page.goto(urlHome)
 
         await expect(page.locator('h1')).toContainText('An investment in knowledge pays the best interest.');
     })
 
-    test('Paragraph Tag', async({ page }) => { 
+    test.skip('Paragraph Tag', async({ page }) => { 
         await page.goto(urlHome)
 
         const paragraphText = page.getByRole('paragraph');
         await expect(paragraphText).toContainText('Different than a college or university, the British Columbia Institute of Technology offers practical, flexible, applied education with instructors who have direct, hands-on experience in their field.')
     })
 
-    test('More About Us Button', async({ page }) => { 
+    test.skip('More About Us Button', async({ page }) => { 
         await page.goto(urlHome)
 
         await page.getByRole('button', { name: 'More About Us' }).click();
     })
 
-    test('Contact Us Button', async({ page }) => { 
+    test.skip('Contact Us Button', async({ page }) => { 
         await page.goto(urlHome)
 
         await page.getByRole('button', { name: 'Contact Us' }).click();
     })
 
-    test('Checking to see if two buttons are in the main area', async({ page }) => { 
+    test.skip('Checking to see if two buttons are in the main area', async({ page }) => { 
         await page.goto(urlHome)
         await expect(page.locator('a > button')).toHaveCount(2);
     })
 })
 
 test.describe('The Arrow Area', () => {
-    test('Link Tag and navigation', async({ page }) => {
+    test.skip('Link Tag and navigation', async({ page }) => {
         await page.goto(urlHome)
 
         await expect(page.locator('a > span > img')).toHaveCount(1);

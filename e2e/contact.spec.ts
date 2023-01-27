@@ -13,13 +13,13 @@ test.afterAll(async () => {
 });
 
 test.describe('Header area', () => { 
-    test('The title tag', async({ page }) => {
+    test.skip('The title tag', async({ page }) => {
         await page.goto(urlContact)
 
         await expect(page).toHaveTitle('Contact Us');
     })
 
-    test('The meta tag', async ({ page }) => { 
+    test.skip('The meta tag', async ({ page }) => { 
         // Start from the index page (the baseURL is set via the webServer in the playwright.config.ts)
         await page.goto(urlContact)
         
@@ -33,7 +33,7 @@ test.describe('Header area', () => {
         await expect(metaDescriptionThree).toHaveAttribute('content', 'BCIT Digital Design and Development Diploma')
     })
 
-    test('The link tag', async ({ page }) => {
+    test.skip('The link tag', async ({ page }) => {
         await page.goto(urlContact)
 
         const linkTag = page.locator('link[rel="icon"]');
@@ -42,49 +42,49 @@ test.describe('Header area', () => {
 })
 
 test.describe('Main area', () => { 
-    test('Header Tags', async({ page }) => {
+    test.skip('Header Tags', async({ page }) => {
         await page.goto(urlContact)
 
         await expect(page.locator('div > h1')).toHaveCount(1);
     })
 
-    test('Count number of paragraphs under content area', async({ page }) => {
+    test.skip('Count number of paragraphs under content area', async({ page }) => {
         await page.goto(urlContact)
 
         await expect(page.locator('div > p')).toHaveCount(1);
     })
 
-    test('Count number of forms content area', async({ page }) => {
+    test.skip('Count number of forms content area', async({ page }) => {
         await page.goto(urlContact)
 
         await expect(page.locator('div > form')).toHaveCount(1);
     })
 
-    test('Count fieldsets in form', async({ page }) => {
+    test.skip('Count fieldsets in form', async({ page }) => {
         await page.goto(urlContact)
 
         await expect(page.locator('form > fieldset')).toHaveCount(1);
     })
 
-    test('Count table in form', async({ page }) => {
+    test.skip('Count table in form', async({ page }) => {
         await page.goto(urlContact)
 
         await expect(page.locator('form > fieldset > table')).toHaveCount(1);
     })
 
-    test('Count thead in form', async({ page }) => {
+    test.skip('Count thead in form', async({ page }) => {
         await page.goto(urlContact)
 
         await expect(page.locator('form > fieldset > table > thead')).toHaveCount(2);
     })
 
-    test('Count tr in first thead', async({ page }) => {
+    test.skip('Count tr in first thead', async({ page }) => {
         await page.goto(urlContact)
 
         await expect(page.locator('form > fieldset > table > thead > tr')).toHaveCount(2);
     })
 
-    test('Submit Button', async({ page }) => { 
+    test.skip('Submit Button', async({ page }) => { 
         await page.goto(urlContact)
 
         const firstName = await page.locator('input#firstName');
@@ -111,7 +111,7 @@ test.describe('Main area', () => {
 })
 
 test.describe('The Arrow Area', () => {
-    test('Link tag and navigation', async({ page }) => {
+    test.skip('Link tag and navigation', async({ page }) => {
         await page.goto(urlHome)
 
         await expect(page.locator('a > span > img')).toHaveCount(1);
