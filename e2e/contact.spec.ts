@@ -42,43 +42,43 @@ test.describe('Header area', () => {
 })
 
 test.describe('Main area', () => { 
-    test.skip('Header Tags', async({ page }) => {
+    test('Header Tags', async({ page }) => {
         await page.goto(urlContact)
 
         await expect(page.locator('div > h1')).toHaveCount(1);
     })
 
-    test.skip('Count number of paragraphs under content area', async({ page }) => {
+    test('Count number of paragraphs under content area', async({ page }) => {
         await page.goto(urlContact)
 
         await expect(page.locator('div > p')).toHaveCount(1);
     })
 
-    test.skip('Count number of forms content area', async({ page }) => {
+    test('Count number of forms content area', async({ page }) => {
         await page.goto(urlContact)
 
         await expect(page.locator('div > form')).toHaveCount(1);
     })
 
-    test.skip('Count fieldsets in form', async({ page }) => {
+    test('Count fieldsets in form', async({ page }) => {
         await page.goto(urlContact)
 
         await expect(page.locator('form > fieldset')).toHaveCount(1);
     })
 
-    test.skip('Count table in form', async({ page }) => {
+    test('Count table in form', async({ page }) => {
         await page.goto(urlContact)
 
         await expect(page.locator('form > fieldset > table')).toHaveCount(1);
     })
 
-    test.skip('Count thead in form', async({ page }) => {
+    test('Count thead in form', async({ page }) => {
         await page.goto(urlContact)
 
         await expect(page.locator('form > fieldset > table > thead')).toHaveCount(2);
     })
 
-    test.skip('Count tr in first thead', async({ page }) => {
+    test('Count tr in first thead', async({ page }) => {
         await page.goto(urlContact)
 
         await expect(page.locator('form > fieldset > table > thead > tr')).toHaveCount(2);
