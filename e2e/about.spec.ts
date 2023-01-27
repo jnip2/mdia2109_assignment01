@@ -42,25 +42,25 @@ test.describe('Header area', () => {
 })
 
 test.describe('Main area', () => {
-    test.skip('Header Tags', async({ page }) => {
+    test('Header Tags', async({ page }) => {
         await page.goto(urlAbout)
 
         await expect(page.locator('div > h1')).toHaveCount(2);
     })
 
-    test.skip('Count number of paragraphs under first content area', async({ page }) => {
+    test('Count number of paragraphs under first content area', async({ page }) => {
         await page.goto(urlAbout)
 
         await expect(page.locator('div > p')).toHaveCount(7);
     })
 
-    test.skip('Count number of h2 headers in first content area', async({ page }) => {
+    test('Count number of h2 headers in first content area', async({ page }) => {
         await page.goto(urlAbout)
 
         await expect(page.locator('div > h2')).toHaveCount(2);
     })
 
-    test.skip('Count number of h3 headers in first content area', async({ page }) => {
+    test('Count number of h3 headers in first content area', async({ page }) => {
         await page.goto(urlAbout)
 
         await expect(page.locator('div > h3')).toHaveCount(1);
