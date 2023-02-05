@@ -1,4 +1,5 @@
 import Head from "next/head"
+import Link from "next/link"
 
 export default function About() {
     return (
@@ -71,6 +72,26 @@ export default function About() {
                         
                     </h3>
                 </div>
+                <a>
+                    <span>
+                        <img>
+                        </img>
+                    </span>
+                </a>
+                <a>
+                    <span>
+                        <img>
+                        </img>
+                    </span>
+                </a>
+                <ul>
+                    <li>Applied & Natural Sciences</li>
+                    <li>Business & Media</li>
+                    <li>Computing & IT</li>
+                    <li>Engineerin</li>
+                    <li>Health Sciences</li>
+                    <li>Trades & Apprenticeships</li>
+                </ul>
             </main>
         </>
     )
