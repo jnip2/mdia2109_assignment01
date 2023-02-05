@@ -4,3 +4,8 @@ body, html {
     font-family: sans-serif;
     color: var(--primary-color);
 }
+
+* {
+    outline: 1px solid magenta;
+    outline: none;
+}
