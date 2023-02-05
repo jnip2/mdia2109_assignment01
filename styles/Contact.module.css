@@ -1,0 +1,11 @@
+.main {
+    background: url('../public/background-images/backgroundMountainUpsideDown.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    margin: 0px;
+    object-fit: cover;
+  }
+
+.h1 {
+    margin: 0px;
+}
