@@ -20,21 +20,25 @@ export default function Home() {
         <link rel="icon" href="/favicon.png" />
       </Head>
       <main className={styles.main}>
-        <h1>An investment in knowledge pays the best interest.</h1>
-        <p>Different than a college or university, the British Columbia Institute of Technology offers practical, flexible, applied education with instructors who have direct, hands-on experience in their field.</p>
-        <a>
-          <button>More About Us</button>
-        </a>
-        <a>
-          <button>Contact Us</button>
-        </a>
-        <a>
+        <div className={styles.text__container}>
+          <h1 className={`${styles.h1}`}>An investment in knowledge pays the best interest.</h1>
+          <hr className={styles.hr} />
+          <p>Different than a college or university, the British Columbia Institute of Technology offers practical, flexible, applied education with instructors who have direct, hands-on experience in their field.</p>
+          <Link href='/about'>
+            <button className={styles.button}>More About Us</button>
+          </Link>
+          <Link href='/contact'>
+            <button className={styles.button}>Contact Us</button>
+          </Link>
+        </div>
+        <Link href='/'>
           <span>
             <img></img>
           </span>
-        </a>
+        </Link>
 
       </main>
+
     </>
   )
 }
