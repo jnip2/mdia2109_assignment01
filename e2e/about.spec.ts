@@ -68,13 +68,13 @@ test.describe('Main area', () => {
 })
 
 test.describe('Carousel area', () => {
-    test.skip('Carousel Arrows', async({ page }) => {
+    test('Carousel Arrows', async({ page }) => {
         await page.goto(urlAbout)
 
-        await page.screenshot({ path: '/icons/leftArrow.png'})
+        await page.screenshot({ path: './icons/leftArrow.png'})
 
 
-        await page.screenshot({ path: '/icons/rightArrow.png'})
+        await page.screenshot({ path: './icons/rightArrow.png'})
     })
 
     test.skip('Carousel main container area stylizing', async({ page }) => { 
@@ -147,7 +147,7 @@ test.describe('Carousel area', () => {
         expect(grabbedMarginCarousel).toBe("0px 50px");
     })
 
-    test.skip('Should contain an unordered list of information', async ({ page }) => {
+    test('Should contain an unordered list of information', async ({ page }) => {
         await page.goto(urlAbout)
         await expect(page.locator('ul > li')).toContainText(["Applied & Natural Sciences", "Business & Media", "Computing & IT", "Engineerin", "Health Sciences", "Trades & Apprenticeships"]);
     })
@@ -155,7 +155,7 @@ test.describe('Carousel area', () => {
 
 
 test.describe('The Arrow Area', () => {
-    test.skip('Link tag and navigation', async({ page }) => {
+    test('Link tag and navigation', async({ page }) => {
         await page.goto(urlAbout)
 
         await expect(page.locator('a > span > img')).toHaveCount(2);
