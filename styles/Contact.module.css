@@ -1,11 +1,97 @@
 .main {
     background: url('../public/background-images/backgroundMountainUpsideDown.jpg') no-repeat center center fixed;
     background-size: cover;
-    height: 100vh;
     margin: 0px;
     object-fit: cover;
   }
 
+ .page__navbar {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0px;
+ } 
+
+.content__container {
+  margin: 0px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.form__size {
+  width: 650px;
+  padding: 30px;
+}
+
+.page__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 120px;
+}
+
+.header__text {
+  display: flex;
+  gap: 80px;
+  align-items: center;
+}
+
+.header__hr { 
+  width: 450px;
+  height: 0px;
+  border: 1.5px solid var(--secondary-color);
+}
+
 .h1 {
     margin: 0px;
+}
+
+.border {
+  border: 1px solid var(--quaternary-color);
+}
+
+.page__description {
+  font-weight: light;
+}
+
+.input__layout {
+  display: flex;
+  flex-direction: column;
+}
+
+.table__layout {
+  display: flex;
+  flex-direction: column;
+}
+
+.row__layout {
+  display: flex;
+  width: 100%;
+}
+
+.form__label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.belowform__container {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  align-items: end;
+}
+
+.errorMessage__container {
+  height: 110px;
+  display: inline;
+}
+
+.errorMessage {
+  color: darkred;
+  margin-bottom: 30px;
 }
