@@ -84,7 +84,7 @@ test.describe('Main area', () => {
         await expect(page.locator('form > fieldset > table > thead > tr')).toHaveCount(2);
     })
 
-    test.skip('Submit Button', async({ page }) => { 
+    test('Submit Button', async({ page }) => { 
         await page.goto(urlContact)
 
         const firstName = await page.locator('input#firstName');
@@ -111,7 +111,7 @@ test.describe('Main area', () => {
 })
 
 test.describe('The Arrow Area', () => {
-    test.skip('Link tag and navigation', async({ page }) => {
+    test('Link tag and navigation', async({ page }) => {
         await page.goto(urlHome)
 
         await expect(page.locator('a > span > img')).toHaveCount(1);
