@@ -1,0 +1,27 @@
+.page__navbar {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0px;
+   } 
+
+.popup__container {
+    background-image: url("/background-images/menuBackground.png");
+    background-size: cover;
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.popup__components {
+    list-style: none;
+}
+
+.popup__link {
+    color: var(--primary-color);
+    text-decoration: none;
+}
