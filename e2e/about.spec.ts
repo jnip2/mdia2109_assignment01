@@ -77,7 +77,7 @@ test.describe('Carousel area', () => {
         await page.screenshot({ path: './icons/rightArrow.png'})
     })
 
-    test.skip('Carousel main container area stylizing', async({ page }) => { 
+    test('Carousel main container area stylizing', async({ page }) => { 
         await page.goto(urlAbout)
 
         const carousel = page.locator('#carouselImage');
@@ -125,7 +125,7 @@ test.describe('Carousel area', () => {
         expect(grabbedMargin).toBe("40px 0px");
     })
 
-    test.skip('Carousel center text stylizing', async({ page }) => {
+    test('Carousel center text stylizing', async({ page }) => {
         await page.goto(urlAbout)
 
         const carousel = page.locator('#testOnImageHere');
