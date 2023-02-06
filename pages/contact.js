@@ -3,6 +3,7 @@ import { useState } from "react"
 import styles from '../styles/Contact.module.css'
 import Link from "next/link"
 import Image from "next/image"
+import Navigation from "../Components/Navigation"
 
 export default function Contact() {
     const [firstName, setFirstName] = useState("")
@@ -20,10 +21,7 @@ export default function Contact() {
             </Head>
             <main className={styles.main}>
                 <div className={styles.content__container}>
-                    <div className={styles.page__navbar}>
-                        <Image width={40} height={30} src="/icons/menu-icon.png" />
-                        <Image width={40} height={30} src="/icons/graduation-hat.png" />
-                    </div>
+                    <Navigation />
                     <div className={styles.page__header}>
                         <div className={styles.header__text}>
                             <hr className={styles.header__hr} />
@@ -48,7 +46,9 @@ export default function Contact() {
                                         </thead>
                                         <tr className={styles.row__layout}>
                                             <td className={styles.input__layout}>
-                                                <label className={styles.form__label}>First name:</label>
+                                                <label className={styles.form__label}>
+                                                    First name:
+                                                    </label>
                                                 <input
                                                     type="text"
                                                     placeholder="First name here"
@@ -58,7 +58,9 @@ export default function Contact() {
                                                 />
                                             </td>
                                             <td className={styles.input__layout}>
-                                                <label className={styles.form__label}>Last name:</label>
+                                                <label className={styles.form__label}>
+                                                    Last name:
+                                                    </label>
                                                 <input
                                                     type="text"
                                                     placeholder="Last name here"
@@ -74,7 +76,9 @@ export default function Contact() {
                                         </thead>
                                         <tr>
                                             <td className={styles.input__layout}>
-                                                <label className={styles.form__label}>Email:</label>
+                                                <label className={styles.form__label}>
+                                                    Email:
+                                                    </label>
                                                 <input
                                                     type="text"
                                                     placeholder="Email here"
@@ -103,7 +107,7 @@ export default function Contact() {
                         <div className={styles.arrow__container}>
                             <Link href='#top'>
                                 <span>
-                                    <Image height={40} width={40} src="/icons/upwardArrow.png" />
+                                    <Image height={40} width={30} src="/icons/upwardArrow.png" />
                                 </span>
                             </Link>
                         </div>
