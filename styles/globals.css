@@ -3,6 +3,7 @@ body, html {
     height: 100vh;
     font-family: sans-serif;
     color: var(--primary-color);
+    background-color: var(--quaternary-color);
 }
 
 * {

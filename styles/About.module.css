@@ -1,0 +1,23 @@
+.main {
+    background-color: var(--quaternary-color);
+    height: 100%;
+    margin: 0px;
+}
+
+.header {
+    margin: 0px;
+}
+
+.carousel__container {
+    width: 400px;
+}
+
+.arrow__container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.departments__list {
+    list-style: none;
+}
