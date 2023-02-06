@@ -6,8 +6,6 @@ import Contact from './contact'
 import About from './about'
 import Link from 'next/link'
 
-const inter = Inter({ subsets: ['latin'] })
-
 export default function Home() {
   return (
     <>
@@ -23,12 +21,18 @@ export default function Home() {
         <div className={styles.text__container}>
           <h1 className={`${styles.h1}`}>An investment in knowledge pays the best interest.</h1>
           <hr className={styles.hr} />
-          <p>Different than a college or university, the British Columbia Institute of Technology offers practical, flexible, applied education with instructors who have direct, hands-on experience in their field.</p>
+          <p>
+            Different than a college or university, the British Columbia Institute of Technology offers practical, flexible, applied education with instructors who have direct, hands-on experience in their field.
+          </p>
           <Link href='/about'>
-            <button className={styles.button}>More About Us</button>
+            <button className={styles.button}>
+              More About Us
+            </button>
           </Link>
           <Link href='/contact'>
-            <button className={styles.button}>Contact Us</button>
+            <button className={styles.button}>
+              Contact Us
+            </button>
           </Link>
         </div>
         <Link href='/'>
