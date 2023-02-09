@@ -10,6 +10,7 @@ export default function Contact() {
     const [lastName, setLastName] = useState("")
     const [email, setEmail] = useState("")
 
+
     return (
         <>
             <Head>
@@ -102,6 +103,12 @@ export default function Contact() {
                             }
                             {
                                 email.length > 0 && !/^[a-zA-Z0-9.!#$%&'*+=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email) ? <div className={styles.errorMessage}>Email is invalid</div> : <div></div>
+                            }
+                            {
+                                (firstName.length > 0 && /^[A-Z]/.test(firstName) && !/[0-9]{1,}/.test(firstName))&&
+                                (lastName.length > 0 && /^[A-Z]/.test(lastName) && !/[0-9]{1,}/.test(lastName))&&
+                                (email.length > 0 && /^[a-zA-Z0-9.!#$%&'*+=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email))?
+                                <button className={styles.form__button}>Submit</button> : <></>
                             }
                         </div>
                         <div className={styles.arrow__container}>
