@@ -34,12 +34,14 @@ export default function About() {
             </Head>
             <main className={styles.main}>
                 <Navigation />
-                <div>
-                    <h1 className={styles.header}>
+                <div className={styles.page__header}>
+                    <hr className={styles.header__hr} />
+                    <h1 className={styles.h1}>
                         About Us
                     </h1>
+                    <hr className={styles.header__hr} />
                 </div>
-                <div>
+                <div className={styles.content__container}>
                     <p>
                         We are proud to deliver an education that goes beyond textbooks and classrooms.
                     </p>
@@ -49,16 +51,12 @@ export default function About() {
                     <p>
                         Through close collaboration with industry, our network of alumni and partners continue to achieve global success.
                     </p>
-                </div>
-                <div>
                     <h2>
                         Information Sessions
                     </h2>
                     <p>
                         Information sessions are a simple way to figure out the next step along your career path. Learn more about the programs that interest you.
                     </p>
-                </div>
-                <div>
                     <h3>
                         Big Info
                     </h3>
@@ -68,13 +66,9 @@ export default function About() {
                     <p>
                         If you missed our fall event the next Big Info session is scheduled to return February 15, 2023.
                     </p>
-                </div>
-                <div>
                     <h2>
                         Campus Tours
                     </h2>
-                </div>
-                <div>
                     <p>
                         Tours run weekdays from September to May, on our Burnaby campus. See BCIT in person and get a taste of campus life.
                     </p>
@@ -91,57 +85,58 @@ export default function About() {
                         margin: "40px 0px",
                         backgroundImage: `url(./carousel-images/${number}.jpg)`
                     }}>
-                        <Image height={30} width={40} src="/icons/leftArrow.png" 
-                            onClick={() => {
-                                setNumber((number - 1) % 5)
-                                setTrigger(true)
-                            }
-                            }
-                        />
-                        <div id="testOnImageHere"
-                            style={{
-                                backgroundColor: "var(--quinary-color)",
-                                padding: "10px",
-                                margin: "0px 50px"
-                            }}>
-                            {data[number % 5].value}
-                        </div>
-                        <Image height={30} width={40} src="/icons/rightArrow.png"
-                            onClick={() => {
-                                setNumber((number + 1) % 5)
-                                setTrigger(true)
-                            }}
-                        />
+                    <Image height={30} width={40} src="/icons/leftArrow.png"
+                        onClick={() => {
+                            setNumber((number - 1) % 5)
+                            setTrigger(true)
+                        }
+                        }
+                    />
+                    <div id="testOnImageHere"
+                        style={{
+                            backgroundColor: "var(--quinary-color)",
+                            padding: "10px",
+                            margin: "0px 50px"
+                        }}>
+                        {data[number % 5].value}
                     </div>
-
-                <div>
-                        DEPARTMENTS
+                    <Image height={30} width={40} src="/icons/rightArrow.png"
+                        onClick={() => {
+                            setNumber((number + 1) % 5)
+                            setTrigger(true)
+                        }}
+                    />
                 </div>
 
-                <ul className={styles.departments__list}>
-                    <li>Applied & Natural Sciences</li>
-                    <li>Business & Media</li>
-                    <li>Computing & IT</li>
-                    <li>Engineerin</li>
-                    <li>Health Sciences</li>
-                    <li>Trades & Apprenticeships</li>
-                </ul>
-                <a>
-                    <span>
-                        <div className={styles.arrow__container}>
-                            <Link href='#top'>
-                                <span>
-                                    <Image height={40} width={30} src="/icons/upwardArrow.png"/>
-                                </span>
-                            </Link>
-                            <Link href='#top'>
-                                <span>
-                                    <Image height={40} width={30} src="/icons/downwardArrow.png"/>
-                                </span>
-                            </Link>
-                        </div>
-                    </span>
-                </a>
+                <div className={styles.page__departments}>
+
+                    <ul className={styles.departments__list}>
+                        DEPARTMENTS
+                        <li className={styles.departments__items}>Applied & Natural Sciences</li>
+                        <li className={styles.departments__items}>Business & Media</li>
+                        <li className={styles.departments__items}>Computing & IT</li>
+                        <li className={styles.departments__items}>Engineerin</li>
+                        <li className={styles.departments__items}>Health Sciences</li>
+                        <li className={styles.departments__items}>Trades & Apprenticeships</li>
+                    </ul>
+
+                    <Link href="#top">
+                        <span>
+                            <div className={styles.arrow__container}>
+                                <Link href='#top'>
+                                    <span>
+                                        <Image height={40} width={30} src="/icons/upwardArrow.png" />
+                                    </span>
+                                </Link>
+                                <Link href='#top'>
+                                    <span>
+                                        <Image height={40} width={30} src="/icons/downwardArrow.png" />
+                                    </span>
+                                </Link>
+                            </div>
+                        </span>
+                    </Link>
+                </div>
             </main>
         </>
     )
