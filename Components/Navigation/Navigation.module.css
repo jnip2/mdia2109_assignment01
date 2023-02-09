@@ -15,6 +15,9 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    position: absolute;
+    top: 0px;
+    left: 0px;
 }
 
 .popup__components {
